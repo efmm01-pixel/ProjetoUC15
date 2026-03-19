@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de produtos CyberPoint – notebooks, monitores, periféricos e muito mais." />
+  <meta name="author" content="CyberPoint" />
+  <title>Produtos | CyberPoint</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body data-page="produtos">
+ 
+  <header class="site-header" id="topo">
+    <div class="header-inner container">
+      <a href="index.html" class="logo" aria-label="CyberPoint Home">
+        <span class="logo-icon">&#9711;</span>
+        <span class="logo-text">Cyber<strong>Point</strong></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="produtos.html" class="nav-link active">Produtos</a></li>
+          <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+ 
+  <main id="main-content">
+ 
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Nossos Produtos</h1>
+        <p>Equipamentos de alta qualidade para o seu dia a dia</p>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol>
+            <li><a href="index.html">Início</a></li>
+            <li aria-current="page">Produtos</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+ 
+    <!-- FILTRO + CATÁLOGO -->
+    <section class="catalog section" aria-labelledby="catalog-heading">
+      <div class="container catalog-layout">
+ 
+        <!-- SIDEBAR FILTROS -->
+        <aside class="filters-sidebar" aria-label="Filtros de produtos">
+          <h2 id="catalog-heading" class="filters-title">Filtrar</h2>
+ 
+          <div class="filter-group">
+            <h3>Categoria</h3>
+            <ul class="filter-list" role="list">
+              <li><label><input type="radio" name="cat" value="todos" checked /> Todos</label></li>
+              <li><label><input type="radio" name="cat" value="notebooks" /> Notebooks</label></li>
+              <li><label><input type="radio" name="cat" value="monitores" /> Monitores</label></li>
+              <li><label><input type="radio" name="cat" value="perifericos" /> Periféricos</label></li>
+              <li><label><input type="radio" name="cat" value="componentes" /> Componentes</label></li>
+              <li><label><input type="radio" name="cat" value="armazenamento" /> Armazenamento</label></li>
+            </ul>
+          </div>
+ 
+          <div class="filter-group">
+            <h3>Faixa de Preço</h3>
+            <div class="price-range">
+              <label for="price-min" class="sr-only">Preço mínimo</label>
+              <input type="number" id="price-min" placeholder="Min R$" min="0" />
+              <span>–</span>
+              <label for="price-max" class="sr-only">Preço máximo</label>
+              <input type="number" id="price-max" placeholder="Max R$" min="0" />
+            </div>
+            <button class="btn btn-outline btn-sm" id="apply-price">Aplicar</button>
+          </div>
+ 
+          <div class="filter-group">
+            <h3>Ordenar por</h3>
+            <select id="sort-select" aria-label="Ordenar produtos">
+              <option value="default">Padrão</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="name-asc">A–Z</option>
+            </select>
+          </div>
+ 
+          <button class="btn btn-outline btn-sm" id="clear-filters">Limpar filtros</button>
+        </aside>
+ 
+        <!-- PRODUTOS -->
+        <div class="products-area">
+          <div class="products-toolbar">
+            <p id="results-count" class="results-count"></p>
+            <div class="search-wrap">
+              <label for="search-products" class="sr-only">Buscar produtos</label>
+              <input type="search" id="search-products" placeholder="Buscar produto…" aria-label="Buscar produto" />
+            </div>
+          </div>
+          <div class="products-grid" id="products-container" aria-live="polite" aria-label="Lista de produtos">
+            <!-- Preenchido via JS -->
+          </div>
+          <p id="no-results" class="no-results" hidden>Nenhum produto encontrado. Tente outros filtros.</p>
+        </div>
+ 
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <!-- MODAL DO PRODUTO -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-product-name" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+      <div class="modal-emoji" id="modal-emoji" aria-hidden="true"></div>
+      <h2 id="modal-product-name"></h2>
+      <p id="modal-product-desc"></p>
+      <ul id="modal-specs" class="modal-specs"></ul>
+      <p class="modal-price" id="modal-price"></p>
+      <a href="cadastro.html" class="btn btn-primary">Comprar agora</a>
+    </div>
+  </div>
+ 
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">&#9711;</span>
+          <span class="logo-text">Cyber<strong>Point</strong></span>
+        </a>
+        <p>Sua loja de informática online.<br />Tecnologia acessível para todos.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <address>
+          <p>📧 contato@cyberpoint.com</p>
+          <p>📞 (11) 9 8765-4321</p>
+          <p>📍 Jundiaí – SP</p>
+        </address>
+        <div class="footer-links">
+          <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools</a>
+          <a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer">MDN Docs</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CyberPoint. Todos os direitos reservados.</p>
+      <a href="#topo" class="back-to-top" aria-label="Voltar ao topo">Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

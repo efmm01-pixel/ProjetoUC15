@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CyberPoint – Loja online de equipamentos de informática. Encontre os melhores produtos com os melhores preços!" />
+  <meta name="author" content="ByteShop" />
+  <title>CyberPoint - Loja online</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body data-page="home">
+
+  <header class="site-header" id="topo">
+    <div class="header-inner container">
+      <a href="index.html" class="logo" aria-label="CyberPoint Home">
+        <span class="logo-icon">&#9711;</span>
+        <span class="logo-text">Cyber<strong>Point</strong></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Início</a></li>
+          <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+          <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="hero-tag">Nova coleção 2026</span>
+          <h1 id="hero-title">Tecnologia que<br /><em>transforma</em> seu setup.</h1>
+          <p>Temos equipamentos de alto desempenho para trabalho, estudo e gaming. Do básico ao profissional, temos tudo o que você precisa.</p>
+          <div class="hero-cta">
+            <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+            <a href="cadastro.html" class="btn btn-outline">Cadastre-se</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="hero-card floating">
+            <div class="hero-card-icon">💻</div>
+            <div class="hero-card-info">
+              <span class="hero-card-name">Notebook Pro X</span>
+              <span class="hero-card-price">R$ 3.500</span>
+            </div>
+          </div>
+          <div class="hero-card floating delay-1">
+            <div class="hero-card-icon">🖥️</div>
+            <div class="hero-card-info">
+              <span class="hero-card-name">Monitor UltraWide</span>
+              <span class="hero-card-price">R$ 1.500</span>
+            </div>
+          </div>
+          <div class="hero-card floating delay-2">
+            <div class="hero-card-icon">🖱️</div>
+            <div class="hero-card-info">
+              <span class="hero-card-name">Mouse Gamer RGB</span>
+              <span class="hero-card-price">R$ 300</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section" aria-labelledby="cat-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="cat-title">Explore por Categoria</h2>
+          <p>Encontre o que você precisa</p>
+        </header>
+        <ul class="cat-grid" role="list">
+          <li>
+            <a href="produtos.html?cat=notebooks" class="cat-card" title="Ver notebooks">
+              <span class="cat-emoji" aria-hidden="true">💻</span>
+              <span class="cat-name">Notebooks</span>
+            </a>
+          </li>
+          <li>
+            <a href="produtos.html?cat=monitores" class="cat-card" title="Ver monitores">
+              <span class="cat-emoji" aria-hidden="true">🖥️</span>
+              <span class="cat-name">Monitores</span>
+            </a>
+          </li>
+          <li>
+            <a href="produtos.html?cat=perifericos" class="cat-card" title="Ver periféricos">
+              <span class="cat-emoji" aria-hidden="true">⌨️</span>
+              <span class="cat-name">Periféricos</span>
+            </a>
+          </li>
+          <li>
+            <a href="produtos.html?cat=componentes" class="cat-card" title="Ver componentes">
+              <span class="cat-emoji" aria-hidden="true">🔧</span>
+              <span class="cat-name">Componentes</span>
+            </a>
+          </li>
+          <li>
+            <a href="produtos.html?cat=armazenamento" class="cat-card" title="Ver armazenamento">
+              <span class="cat-emoji" aria-hidden="true">💾</span>
+              <span class="cat-name">Armazenamento</span>
+            </a>
+          </li>
+          <li>
+            <a href="produtos.html" class="cat-card" title="Ver todos os produtos">
+              <span class="cat-emoji" aria-hidden="true">🛒</span>
+              <span class="cat-name">Ver Tudo</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="featured section" aria-labelledby="feat-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="feat-title">Produtos em Destaque</h2>
+          <a href="produtos.html" class="see-all">Ver todos →</a>
+        </header>
+        <div class="products-grid" id="featured-products">
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER PROMO -->
+    <section class="promo-banner section" aria-label="Promoção especial">
+      <div class="container">
+        <div class="promo-inner">
+          <div class="promo-text">
+            <span class="promo-tag">Oferta Relâmpago</span>
+            <h2>Até <strong>40% OFF</strong> em notebooks selecionados</h2>
+            <p>Por tempo limitado. Aproveite antes que acabe!</p>
+            <a href="produtos.html" class="btn btn-primary">Aproveitar oferta</a>
+          </div>
+          <div class="promo-graphic" aria-hidden="true">
+            <span class="promo-emoji">⚡</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VANTAGENS -->
+    <section class="benefits section" aria-labelledby="ben-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="ben-title">Motivos para escolher a CyberPoint</h2>
+        </header>
+        <ul class="benefits-grid" role="list">
+          <li class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">🚚</span>
+            <h3>Frete Grátis</h3>
+            <p>Em compras acima de R$ 250 para todo o Brasil</p>
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">🔒</span>
+            <h3>Pagamento Seguro</h3>
+            <p>Criptografia SSL e múltiplas formas de pagamento</p>
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">↩️</span>
+            <h3>Troca Fácil</h3>
+            <p>30 dias para trocar sua compra sem burocracia</p>
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">💬</span>
+            <h3>Suporte 24h</h3>
+            <p>Time técnico disponível todos os dias</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">&#9711;</span>
+          <span class="logo-text">Cyber<strong>Point</strong></span>
+        </a>
+        <p>A melhor loja de informática online</p>
+      </div>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <address>
+          <p>📧 contato@cyberpoint.com</p>
+          <p>📞 (11) 9 8765-4321</p>
+          <p>📍 Jundiaí – SP</p>
+        </address>
+        <div class="footer-links">
+          <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" title="Abrir W3Schools">W3Schools</a>
+          <a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer" title="Abrir MDN Web Docs">MDN Docs</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CyberPoint. Todos os direitos reservados.</p>
+      <a href="#topo" class="back-to-top" aria-label="Voltar ao topo">Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cadastre-se na CyberPoint e aproveite vantagens exclusivas." />
+  <meta name="author" content="ByteShop" />
+  <title>Cadastro | CyberPoint</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body data-page="cadastro">
+
+  <header class="site-header" id="topo">
+    <div class="header-inner container">
+      <a href="index.html" class="logo" aria-label="CyberPoint Home">
+        <span class="logo-icon">&#9711;</span>
+        <span class="logo-text">Cyber<strong>Point</strong></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+          <li><a href="cadastro.html" class="nav-link active">Cadastro</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-hero" aria-labelledby="cad-page-title">
+      <div class="container">
+        <h1 id="cad-page-title">Criar Conta</h1>
+        <p>Acesse ofertas exclusivas e acompanhe seus pedidos</p>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol>
+            <li><a href="index.html">Início</a></li>
+            <li aria-current="page">Cadastro</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="form-section section" aria-labelledby="form-title">
+      <div class="container form-container">
+
+        <div class="form-card">
+          <h2 id="form-title">Seus Dados</h2>
+          <p class="form-subtitle">Preencha os campos abaixo para criar sua conta gratuita.</p>
+
+          <form id="cadastro-form" class="cadastro-form" novalidate aria-label="Formulário de cadastro">
+
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome">Nome completo <span aria-hidden="true" class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Seu nome"
+                    required
+                    minlength="3"
+                    maxlength="80"
+                    autocomplete="name"
+                    aria-describedby="nome-error"
+                  />
+                  <span class="field-error" id="nome-error" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="cpf">CPF <span aria-hidden="true" class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="cpf"
+                    name="cpf"
+                    placeholder="000.000.000-00"
+                    required
+                    maxlength="14"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    aria-describedby="cpf-error"
+                  />
+                  <span class="field-error" id="cpf-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nascimento">Data de nascimento <span aria-hidden="true" class="required">*</span></label>
+                  <input
+                    type="date"
+                    id="nascimento"
+                    name="nascimento"
+                    required
+                    aria-describedby="nascimento-error"
+                  />
+                  <span class="field-error" id="nascimento-error" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(11) 9 0000-0000"
+                    maxlength="16"
+                    inputmode="numeric"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Acesso</legend>
+
+              <div class="form-group">
+                <label for="email">E-mail <span aria-hidden="true" class="required">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                />
+                <span class="field-error" id="email-error" role="alert"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="senha">Senha <span aria-hidden="true" class="required">*</span></label>
+                  <div class="input-password">
+                    <input
+                      type="password"
+                      id="senha"
+                      name="senha"
+                      placeholder="Mínimo 8 caracteres"
+                      required
+                      minlength="8"
+                      autocomplete="new-password"
+                      aria-describedby="senha-error senha-hint"
+                    />
+                    <button type="button" class="toggle-password" data-target="senha" aria-label="Mostrar/ocultar senha">👁</button>
+                  </div>
+                  <span class="field-hint" id="senha-hint">Use letras, números e símbolos.</span>
+                  <span class="field-error" id="senha-error" role="alert"></span>
+                  <div class="password-strength" id="password-strength" aria-hidden="true">
+                    <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+                    <span class="strength-label" id="strength-label"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="confirma-senha">Confirme a senha <span aria-hidden="true" class="required">*</span></label>
+                  <div class="input-password">
+                    <input
+                      type="password"
+                      id="confirma-senha"
+                      name="confirma-senha"
+                      placeholder="Repita a senha"
+                      required
+                      autocomplete="new-password"
+                      aria-describedby="confirma-senha-error"
+                    />
+                    <button type="button" class="toggle-password" data-target="confirma-senha" aria-label="Mostrar/ocultar confirmação">👁</button>
+                  </div>
+                  <span class="field-error" id="confirma-senha-error" role="alert"></span>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Endereço</legend>
+
+              <div class="form-row">
+                <div class="form-group" style="flex:0 0 140px">
+                  <label for="cep">CEP <span aria-hidden="true" class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    placeholder="00000-000"
+                    required
+                    maxlength="9"
+                    inputmode="numeric"
+                    aria-describedby="cep-error"
+                  />
+                  <span class="field-error" id="cep-error" role="alert"></span>
+                </div>
+                <div class="form-group" style="flex:1">
+                  <label for="rua">Rua <span aria-hidden="true" class="required">*</span></label>
+                  <input type="text" id="rua" name="rua" placeholder="Nome da rua" required autocomplete="street-address" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group" style="flex:0 0 100px">
+                  <label for="numero">Número</label>
+                  <input type="text" id="numero" name="numero" placeholder="Nº" autocomplete="address-line2" />
+                </div>
+                <div class="form-group">
+                  <label for="complemento">Complemento</label>
+                  <input type="text" id="complemento" name="complemento" placeholder="Apto, bloco…" />
+                </div>
+                <div class="form-group">
+                  <label for="cidade">Cidade <span aria-hidden="true" class="required">*</span></label>
+                  <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required autocomplete="address-level2" />
+                </div>
+              </div>
+
+              <div class="form-group" style="max-width:180px">
+                <label for="estado">Estado <span aria-hidden="true" class="required">*</span></label>
+                <select id="estado" name="estado" required autocomplete="address-level1" aria-describedby="estado-error">
+                  <option value="">Selecione</option>
+                  <option value="AC">AC</option><option value="AL">AL</option>
+                  <option value="AP">AP</option><option value="AM">AM</option>
+                  <option value="BA">BA</option><option value="CE">CE</option>
+                  <option value="DF">DF</option><option value="ES">ES</option>
+                  <option value="GO">GO</option><option value="MA">MA</option>
+                  <option value="MT">MT</option><option value="MS">MS</option>
+                  <option value="MG">MG</option><option value="PA">PA</option>
+                  <option value="PB">PB</option><option value="PR">PR</option>
+                  <option value="PE">PE</option><option value="PI">PI</option>
+                  <option value="RJ">RJ</option><option value="RN">RN</option>
+                  <option value="RS">RS</option><option value="RO">RO</option>
+                  <option value="RR">RR</option><option value="SC">SC</option>
+                  <option value="SP" selected>SP</option><option value="SE">SE</option>
+                  <option value="TO">TO</option>
+                </select>
+                <span class="field-error" id="estado-error" role="alert"></span>
+              </div>
+            </fieldset>
+
+            <fieldset class="prefs-fieldset">
+              <legend>Preferências</legend>
+              <div class="form-group checkgroup">
+                <p>Categorias de interesse:</p>
+                <label><input type="checkbox" name="interesse" value="notebooks" /> Notebooks</label>
+                <label><input type="checkbox" name="interesse" value="monitores" /> Monitores</label>
+                <label><input type="checkbox" name="interesse" value="perifericos" /> Periféricos</label>
+                <label><input type="checkbox" name="interesse" value="componentes" /> Componentes</label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  Quero receber novidades e promoções por e-mail
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="termos" name="termos" required aria-describedby="termos-error" />
+                  Concordo com todos os <a href="#" class="inline-link">Termos de Uso</a> e também com a <a href="#" class="inline-link">Política de Privacidade</a> <span aria-hidden="true" class="required">*</span>
+                </label>
+                <span class="field-error" id="termos-error" role="alert"></span>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                Criar minha conta
+              </button>
+              <p class="login-hint">Já tem conta? <a href="#" class="inline-link">Faça login</a></p>
+            </div>
+
+          </form>
+
+          <div class="form-success" id="form-success" hidden aria-live="polite">
+            <span class="success-icon" aria-hidden="true">✅</span>
+            <h3>Conta criada com sucesso!</h3>
+            <p>Bem-vindo(a) à CyberPoint! Agora você pode aproveitar todas as vantagens.</p>
+            <a href="produtos.html" class="btn btn-primary">Explorar produtos</a>
+          </div>
+
+        </div>
+
+        <aside class="form-aside" aria-label="Benefícios de se cadastrar">
+          <h3>Benefícios de se cadastrar</h3>
+          <ul>
+            <li>
+              <span aria-hidden="true">🎁</span>
+              <div>
+                <strong>Desconto de boas-vindas</strong>
+                <p>15% OFF na primeira compra</p>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true">📦</span>
+              <div>
+                <strong>Acompanhe seus pedidos</strong>
+                <p>Rastreamento em tempo real</p>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true">🔔</span>
+              <div>
+                <strong>Alertas de ofertas</strong>
+                <p>Seja o primeiro a saber</p>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true">⭐</span>
+              <div>
+                <strong>Programa de fidelidade</strong>
+                <p>Acumule pontos a cada compra</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">&#9711;</span>
+          <span class="logo-text">Cyber<strong>Point</strong></span>
+        </a>
+        <p>Sua loja de informática online.<br />Tecnologia acessível para todos.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <address>
+          <p>📧 contato@cyberpoint.com</p>
+          <p>📞 (11) 9 8765-4321</p>
+          <p>📍 Jundiaí – SP</p>
+        </address>
+        <div class="footer-links">
+          <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools</a>
+          <a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer">MDN Docs</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CyberPoint. Todos os direitos reservados.</p>
+      <a href="#topo" class="back-to-top" aria-label="Voltar ao topo">Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
