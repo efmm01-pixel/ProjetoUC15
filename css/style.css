@@ -1,28 +1,28 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Palette */
+
   --c-bg:         #0a0e1a;
   --c-surface:    #111827;
   --c-surface2:   #1a2235;
   --c-border:     #1e2d45;
   --c-accent:     #00d4ff;
-  --c-accent2:    #ff6b35;
+  --c-accent2:    #ff361B;
   --c-text:       #e2e8f0;
   --c-text-muted: #7a90b0;
   --c-white:      #ffffff;
 
-  /* Typography */
+
   --font-display: 'Syne', sans-serif;
   --font-body:    'DM Sans', sans-serif;
 
-  /* Spacing */
+
   --section-gap: clamp(3rem, 6vw, 6rem);
   --container:   1200px;
   --radius:      12px;
   --radius-sm:   6px;
 
-  /* Transitions */
+
   --transition: 220ms ease;
 }
 
@@ -295,7 +295,7 @@ address { font-style: normal; }
   flex-wrap: wrap;
 }
 
-/* Hero floating cards */
+/* cards flutuantes */
 .hero-image {
   display: flex;
   flex-direction: column;
@@ -328,7 +328,7 @@ address { font-style: normal; }
   color: var(--c-accent);
 }
 
-/* Floating animation */
+
 @keyframes floatY {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-10px); }
@@ -337,7 +337,7 @@ address { font-style: normal; }
 .floating.delay-1 { animation-delay: 1.3s; }
 .floating.delay-2 { animation-delay: 2.6s; }
 
-/* CATEGORIES */
+/* CATEGORIAS */
 .cat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -365,7 +365,7 @@ address { font-style: normal; }
 .cat-emoji { font-size: 2rem; }
 .cat-name  { font-size: 0.88rem; font-weight: 500; color: var(--c-text); }
 
-/* PRODUCTS GRID */
+/* PRODUTOS */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -422,7 +422,7 @@ address { font-style: normal; }
 }
 .product-card:hover .product-img img { transform: scale(1.05); }
 
-/* Placeholder emoji */
+/* emoji */
 .product-img-emoji,
 .product-img-fallback {
   font-size: 3.5rem;
@@ -522,7 +522,7 @@ address { font-style: normal; }
 .promo-text p { color: var(--c-text-muted); margin-bottom: 1.5rem; }
 .promo-graphic { font-size: 5rem; opacity: 0.6; }
 
-/* BENEFITS */
+/* BENEFICIOS */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -643,7 +643,7 @@ address { font-style: normal; }
 .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: 0.5rem; }
 .breadcrumb a { color: var(--c-accent); }
 
-/* CATALOG LAYOUT */
+/* LAYOUT CATALOGO */
 .catalog-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -651,7 +651,7 @@ address { font-style: normal; }
   align-items: start;
 }
 
-/* Filters sidebar */
+
 .filters-sidebar {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
@@ -725,7 +725,7 @@ address { font-style: normal; }
   cursor: pointer;
 }
 
-/* Products toolbar */
+/* barra de produtos */
 .products-toolbar {
   display: flex;
   align-items: center;
@@ -837,7 +837,7 @@ address { font-style: normal; }
   margin-bottom: 1.5rem !important;
 }
 
-/* FORM SECTION */
+/* FORMULÁRIO */
 .form-container {
   display: grid;
   grid-template-columns: 1fr 320px;
@@ -932,7 +932,7 @@ legend {
   color: var(--c-text-muted);
 }
 
-/* Password toggle */
+/* Senha */
 .input-password {
   position: relative;
 }
@@ -951,7 +951,7 @@ legend {
 
 
 
-/* Checkboxes */
+
 .checkgroup {
   display: flex;
   flex-wrap: wrap;
@@ -985,7 +985,7 @@ legend {
   margin-top: 0.75rem;
 }
 
-/* Form success */
+
 .form-success {
   text-align: center;
   padding: 2rem;
@@ -999,7 +999,7 @@ legend {
 }
 .form-success p { color: var(--c-text-muted); margin-bottom: 1.5rem; }
 
-/* Form aside */
+
 .form-aside {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
@@ -1021,7 +1021,7 @@ legend {
 .form-aside strong { display: block; font-size: 0.9rem; color: var(--c-white); margin-bottom: 0.15rem; }
 .form-aside p { font-size: 0.82rem; color: var(--c-text-muted); }
 
-/* RESPONSIVE */
+/* RESPONSIVIDADE */
 
 /* Tablet */
 @media (max-width: 900px) {
@@ -1039,7 +1039,7 @@ legend {
   .footer-brand    { grid-column: 1 / -1; }
 }
 
-/* Mobile */
+/* Celular */
 @media (max-width: 600px) {
   .nav-toggle { display: flex; }
 
@@ -1073,7 +1073,7 @@ legend {
   .form-card       { padding: 1.5rem; }
 }
 
-/* INPUT AUTOFILL THEME */
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
@@ -1081,19 +1081,19 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--c-text);
 }
 
-/* SCROLLBAR */
+
 ::-webkit-scrollbar       { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--c-bg); }
 ::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--c-accent); }
 
-/* FOCUS VISIBLE */
+
 :focus-visible {
   outline: 2px solid var(--c-accent);
   outline-offset: 2px;
 }
 
-/* INPUT TYPE=RADIO/CHECKBOX ACCENT */
+
 input[type="radio"],
 input[type="checkbox"] {
   accent-color: var(--c-accent);
